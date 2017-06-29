@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="938cbc53-0f7f-4973-bedf-86ec25a93279" activeEnvironment="Default" name="GEOCODING API" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="a7e0abdb-0847-4e62-8ec2-b07c04e46ae4" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://maps.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://maps.googleapis.com</con:endpoint></con:endpoints><con:resource name="Json" path="/maps/api/geocode/json" id="499829bc-1b31-4fed-83b0-d415e4167478"><con:settings/><con:parameters><con:parameter><con:name>sensor</con:name><con:value>false</con:value><con:style>QUERY</con:style><con:default>false</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>key</con:name><con:value>AIzaSyC-zLT1LhCqWvYJkGSLPkLZ43Oy61oY2vk</con:value><con:style>QUERY</con:style><con:default>AIzaSyC-zLT1LhCqWvYJkGSLPkLZ43Oy61oY2vk</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>address</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>bounds</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>region</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>format</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>latlng</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>components</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>language</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>place_id</con:name><con:style>QUERY</con:style></con:parameter></con:parameters><con:method name="GET" id="bbdb32f5-6e63-4adb-9003-1754984c3c79" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:json="https://maps.googleapis.com/maps/api/geocode/json">json:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:json="https://maps.googleapis.com/maps/api/geocode/json">json:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml; charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>GeocodeResponse</con:element></con:representation><con:request name="Geocode INVALID_REQUEST" id="8893e96d-7ec9-4610-9629-6c6c313a7904" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="adress" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>address</con:entry><con:entry>sensor</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>place_id</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Geocode sample request" id="89e5747a-9dfe-4c7f-96f4-ba27305d72e4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+  <con:entry key="key" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Geocode ZERO RESULTS" id="0866471d-5a99-4dc4-bbf8-4ab92424e9ae" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Geocode REQUEST DENIED" id="5f6a00d9-d64a-4cb5-b6fb-7f79adb5b772" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Viewport Biasing" id="ad3fd999-62f0-40a0-b896-1d2a6186ef44" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Region Biasing" id="56c85720-aed6-4cb5-b858-e92d28576073" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Component filtering" id="4de23e80-f7ab-4eba-92a5-6bb2a4a6be0a" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Excluding component filters" id="b7a5a92d-4328-43b9-88a5-b008d74b5397" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Reverse geocode sample request" id="65859287-ab4e-445c-8d1f-24bf37ab99a5" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Reverse Geocoding Place ID" id="e1361f13-1f42-46f1-bad5-602d683cc036" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>place_id</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Reverse Geocoding Restricted By Type" id="29471aed-0161-4070-9cfe-f1e92c42e602" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request><con:request name="Reverse Geocoding INVALID REQUEST" id="4c041676-3a54-45a7-b306-8675c2493473" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>key</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="xml" path="/maps/api/geocode/xml" id="002cba34-2a65-4b66-a63b-cd5125f563de"><con:settings/><con:parameters><con:parameter><con:name>sensor</con:name><con:style>QUERY</con:style></con:parameter><con:parameter><con:name>key</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>address</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>bounds</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>region</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>format</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>latlng</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>components</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>language</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>place_id</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET" id="a04f3f5a-64c9-4143-9c6b-946dcd99c5fe" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/xml; charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>GeocodeResponse</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>GeocodeResponse</con:element></con:representation><con:request name="Geocode_XML(Positive test)" id="742d770d-b5d1-4ec7-8e6f-524d2106a436" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="key" value="AIzaSyC-zLT1LhCqWvYJkGSLPkLZ43Oy61oY2vk"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>place_id</con:entry></con:parameterOrder></con:request><con:request name="Geocode_SMOKE" id="da3d3f06-60c2-4965-be3c-756ca751e4b7" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request><con:request name="GET-Reverse_geocode_SMOKE" id="ad8d602d-9f77-497b-bd0b-f1b74c3e7434" mediaType="application/json"><con:settings/><con:endpoint>https://maps.googleapis.com</con:endpoint><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="7902e610-aa59-41b3-bc88-eeeddcf95c1e" name="Geocoding API Suite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8a1f3cf6-a54a-4bf3-8eee-8370ccd99383" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Geocoding Test Cases" searchProperties="true"><con:description/><con:settings/><con:testStep type="restrequest" name="GET - INVALID_REQUEST(Negative test)" id="325a3045-75be-40c1-9411-64ea84303267"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - INVALID_REQUEST(Negative test)" id="8893e96d-7ec9-4610-9629-6c6c313a7904" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Simple Contains" id="a3ba949e-b22a-49e2-83a5-a4aa49a56bbd" name="Check for keyword in status response"><con:configuration><token>INVALID_REQUEST</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f23ba8f1-779c-4fb5-a50b-2bf768dd2552" name="Status response"><con:configuration><scriptText>import groovy.json.JsonSlurper
+import java.lang.String
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+
+def timeTaken = messageExchange.getTimeTaken()
+
+log.info("Time taken for searching " + timeTaken + " ms!")
+
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+def passed = true
+if( httpStatusCode == "400"){		
+log.info("HTTP status code is bad")	
+}
+else{
+	log.error(" BVT_ERROR: There are no results in! HTTP Status Code INVALID")
+	passed = false
+	assert false 
+}
+
+if(passed){
+	log.info("Test succeed!")
+	
+}else{
+	assert false 
+}</scriptText></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="30a2d2b0-a4f3-489c-afe4-910947ef78f6" name="Valid HTTP Status Codes"><con:configuration><codes>400</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value="json"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET-Geocode_sample_request" id="0e096408-5091-464e-b46e-83c363816110"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET-Geocode_sample_request" id="89e5747a-9dfe-4c7f-96f4-ba27305d72e4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="bfb3e6f7-a38e-45b8-b133-4c90fa03881c" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="297257db-adbc-4e38-a81a-ff02e2f7ee3f" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+import java.lang.String
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+
+def timeTaken = messageExchange.getTimeTaken()
+
+log.info("Time taken for searching " + timeTaken + " ms!")
+
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+def passed = true
+if( httpStatusCode == "200"){		
+	if(json != "" &amp;&amp; json != null){
+		if(json.size() >0){
+			log.info("JSON is not empty value")
+		}else{
+			log.error("BVT ERROR: JSON.size >0" )
+			passed = false
+			assert false 
+		}	
+	}else{
+		log.error("BVT ERROR:  Response result is null" )
+		passed = false
+		assert false 
+	}	
+}
+else{
+	log.error(" BVT_ERROR: There are no results in! HTTP Status Code INVALID")
+	passed = false
+	assert false 
+}
+
+if(passed){
+	log.info("Test succeed!")
+	
+}else{
+	assert false 
+}</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="cda1e667-9c6e-41db-afaf-9600724c7f5e" name="Check value from JSON response"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+if (context.testCase.getTestStepAt(context.getCurrentStepIndex()).getAssertionByName("Valid HTTP Status Codes").getStatus().toString() == "VALID" ){	
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;
+			
+		 json.results.address_components.each{
+          log.info it.long_name
+         def street = it.long_name
+         
+         if(street.contains("Milana Preloga")){
+         	log.info("Entered if loop")
+        
+			log.info true;
+			assert true;	
+		}
+         
+}
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+}
+else{
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;		
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+	log.error("Error")
+
+	assert false;
+}	
+
+log.info("")
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value=""/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="adress" value="${#TestCase#adress}"/>
+  <con:entry key="address" value="${#TestCase#address}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value="json"/>
+  <con:entry key="key" value="AIzaSyBTHH-DE33t50C80qiF55fpUuNGgEQDJlI"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET-ZERO_RESULTS" id="6d6dd62f-6cf2-4a82-bc53-49cf703c7652"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET-ZERO_RESULTS" id="89e5747a-9dfe-4c7f-96f4-ba27305d72e4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Simple Contains" id="ceffd91f-d7ae-4bc0-ab3e-86f18420e1d7" name="Contains"><con:configuration><token>ZERO_RESULTS</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="ed28fe97-b8f4-49ff-8407-230a815d0b07" name="Script Assertion"><con:configuration><scriptText>package io.geier
+
+class Results {
+    public static void main(String[] args) {
+        List&lt;String> emptyList = [];
+        List&lt;String> nullList = null;
+
+        if (emptyList == null || emptyList.empty) {
+            println "AAA emptyList"
+        }
+
+        if (emptyList?.empty) {
+            println "BBB emptyList"
+        }
+
+        println "-----------------"
+
+        if (nullList == null || nullList.empty) {
+            println "AAA nullList"
+        }
+
+        if (nullList?.empty) {
+            println "BBB nullList"
+        }
+    }
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="bounds" value=""/>
+  <con:entry key="region" value=""/>
+  <con:entry key="address" value="${#TestCase#non_exiting_address}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value="json"/>
+  <con:entry key="key" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>key</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - REQUEST_DENIED" id="715cca06-d7ae-42c6-aef0-53000739f1b4"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - REQUEST_DENIED" id="132d7e8b-8763-4d9b-863f-9f2731759f53" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="859b9ebd-04ec-4835-8579-e1eba8879e1a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f84684ce-a3f3-496b-9bed-93f9cc775f1a" name="Check for keyword in status response"><con:configuration><token>REQUEST_DENIED</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="address" value="${#TestCase#address}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+  <con:entry key="key" value="${#TestCase#invalid_key}"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Viewport_Biasing" id="8a658092-d6be-4e12-be3d-b6defff3ea6e"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Viewport_Biasing" id="c5803763-4976-45d3-91b8-c16069471594" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/jsonjson</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="0fbb3a12-2456-4efc-9123-5a48319c9575" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f3998f91-708d-41af-ae65-a0106b58bb3c" name="Check value from JSON response"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+if (context.testCase.getTestStepAt(context.getCurrentStepIndex()).getAssertionByName("Valid HTTP Status Codes").getStatus().toString() == "VALID" ){	
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;
+			
+		 json.results.address_components.each{
+          log.info it.long_name
+         def canton = it.long_name
+         
+         if(canton.contains("Una-Sana Canton")){
+         	log.info("Defined bound is out of range")
+        
+			log.info true;
+			assert true;	
+		}
+         
+}
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+}
+else{
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;		
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+	log.error("Error")
+
+	assert false;
+}	
+
+log.info("")
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="bounds" value="${#TestCase#bounds}"/>
+  <con:entry key="address" value="${#TestCase#viewport_address}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value="json"/>
+  <con:entry key="key" value="AIzaSyBTHH-DE33t50C80qiF55fpUuNGgEQDJlI"/>
+</con:parameters><con:parameterOrder><con:entry>address</con:entry><con:entry>sensor</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>key</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Region_Biasing" id="12f57c33-ba0c-46b1-925d-5d618598134f"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Region_Biasing" id="30904751-409e-41f8-838e-4d54fecb9eca" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="c0a57104-952d-45a7-8d5b-a4dbe00482c9" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="77e3b23f-f5c1-4674-95db-f4c1c0a50277" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+if (context.testCase.getTestStepAt(context.getCurrentStepIndex()).getAssertionByName("Valid HTTP Status Codes").getStatus().toString() == "VALID" ){	
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;
+			
+		 json.results.address_components.each{
+          log.info it.long_name
+         def bound = it.long_name
+         
+         if(bound.contains("Memphis")){
+         	log.info("Defined bound found")
+        
+			log.info true;
+			assert true;	
+		}
+         
+}
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+}
+else{
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;		
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+	log.error("Error")
+
+	assert false;
+}	
+
+log.info("")
+</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="0c3792ae-7d1c-4ef7-8130-7c351ab8fad2" name="Contains"><con:configuration><token>US</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="region" value="#TestCase#region}"/>
+  <con:entry key="address" value="${#TestCase#region_address}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value="json"/>
+  <con:entry key="key" value=""/>
+</con:parameters><con:parameterOrder><con:entry>address</con:entry><con:entry>sensor</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>key</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Component_Filtering" id="daeb1499-fb80-404c-bc45-a0fe094fb019"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Component_Filtering" id="99b9270b-f5c5-4ce5-8f97-22e553a14173" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="6654297c-e044-4352-af85-8adb8171094c" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="8c282afa-210c-494e-bdb5-f9391b3bcb47" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+import java.lang.String
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+
+def timeTaken = messageExchange.getTimeTaken()
+
+log.info("Time taken for searching " + timeTaken + " ms!")
+
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+def passed = true
+if( httpStatusCode == "200"){		
+	if(json != "" &amp;&amp; json != null){
+		if(json.size() >0){
+			log.info("JSON is not empty value")
+		}else{
+			log.error("BVT ERROR: JSON.size >0" )
+			passed = false
+			assert false 
+		}	
+	}else{
+		log.error("BVT ERROR:  Response result is null" )
+		passed = false
+		assert false 
+	}	
+}
+else{
+	log.error(" BVT_ERROR: There are no results in! HTTP Status Code INVALID")
+	passed = false
+	assert false 
+}
+
+if(passed){
+	log.info("Test succeed!")
+	
+}else{
+	assert false 
+}</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="dd0e524a-0d8f-4bb0-b0e1-7cd5d85e9279" name="Check for component filter"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+
+if (context.testCase.getTestStepAt(context.getCurrentStepIndex()).getAssertionByName("Valid HTTP Status Codes").getStatus().toString() == "VALID" ){	
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;
+			
+		 json.results.address_components.each{
+          log.info it.address_components
+         def component_filter = it.types
+         
+         if(component_filter.contains(["postal_code"])){
+         	log.info("Component filter recognised")
+        
+			log.info true;
+			assert true;	
+		}
+         
+}
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+}
+else{
+	try{
+		response = messageExchange.response.responseContent;
+		slurper = new JsonSlurper();
+		json = slurper.parseText response;		
+	}
+	catch(e){
+		log.error("There was no JSON in server response. Exiting with error: " + e);
+		assert false;
+	}
+	log.error("Error")
+
+	assert false;
+}	
+
+log.info("")
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="address" value="Kovači"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="components" value="postal_code:71000"/>
+  <con:entry key="language" value=""/>
+  <con:entry key="format" value="json"/>
+</con:parameters><con:parameterOrder><con:entry>address</con:entry><con:entry>sensor</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>key</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Excluding_component_filters" id="1dbd0161-7bca-4f4e-ba03-4f1ab9d74059"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Excluding_component_filters" id="2883fa58-198d-4edc-bff3-824a43a41923" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="c5be1c07-ad67-42b4-823e-a318c1564374" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="474e2993-097a-4171-9f90-945becb2a78b" name="Contains"><con:configuration><token>ZERO_RESULTS</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="address" value="Kovači"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value="country:RS|postal_code:71000"/>
+  <con:entry key="format" value="json"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Geocode_XML(Positive test)" id="029b89ca-b4d8-41db-b0b6-0e4085323f1d"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Geocode_XML(Positive test)" id="742d770d-b5d1-4ec7-8e6f-524d2106a436" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/xml</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="0703fe3d-7de1-48ec-ac56-478f54f81a28" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="1672dd8c-9f23-4904-9bf8-424649d3dab6" name="Script Assertion"><con:configuration><scriptText>import javax.xml.XMLConstants
+import javax.xml.transform.stream.StreamSource
+import javax.xml.validation.SchemaFactory
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def xmlResponse = messageExchange.response.responseContent
+
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+def passed = true
+
+def addressInProperty = context.testCase.getPropertyValue("address")
+
+if(httpStatusCode == "200"){
+	log.info("HTTP  Status : " + httpStatusCode +" This is OK" )
+	def responseParser = new XmlParser().parseText(xmlResponse)
+	log.info responseParser
+	
+	String addressInResponse = responseParser.result.formatted_address.text()
+	String streetNumber=responseParser.result.address_component.long_name[0].text()
+	String streetRoute=responseParser.result.address_component.long_name[1].text()
+	
+	if(addressInResponse=="Milana Preloga 12, Sarajevo 71000, Bosnia and Herzegovina"){
+		log.info ("Addres is ok:  " + addressInResponse)
+		
+		if(addressInProperty == streetRoute +" " +streetNumber){
+			log.info ("Street number: " +streetNumber +" and street route: " + streetRoute+ " are OK")							
+		}else{
+			log.error("BVT ERROR:Response does not have correct Street number and Street route")
+			passed = false					
+		}
+		
+	}else{
+		log.error("BVT ERROR:Response does not have correct  address")
+		passed = false					
+		}
+	
+}else{
+       log.error(" BVT_ERROR: Wrong HTTP status code: "+httpStatusCode)	
+       passed = false
+}  
+
+if(passed){
+	log.info("Test Pass!")
+	
+}else{
+	assert false 
+}
+
+
+log.info("")
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="address" value="${#TestCase#address}"/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>place_id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>address</con:name><con:value>Milana Preloga 12</con:value></con:property><con:property><con:name>non_exiting_address</con:name><con:value>9a8f7654rue</con:value></con:property><con:property><con:name>invalid_key</con:name><con:value>12364krt</con:value></con:property><con:property><con:name>viewport_address</con:name><con:value>Bihać</con:value></con:property><con:property><con:name>bounds</con:name><con:value>44.8424816,15,9059715</con:value></con:property><con:property><con:name>region_address</con:name><con:value>Memphis</con:value></con:property><con:property><con:name>region</con:name><con:value>US</con:value></con:property></con:properties></con:testCase><con:testCase id="e1a11a6d-0a94-473f-9c29-467889e9f531" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Geocoding and Reverse SMOKE" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="GET - Geocode" id="b157c54a-3c08-4f08-bc25-50722a2104a4"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Geocode" id="da3d3f06-60c2-4965-be3c-756ca751e4b7" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/xml</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fa2f35bf-0330-4291-a63f-f1ce045c0a2a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="75806d0a-f555-422d-9c08-a3712a02b03e" name="Script Assertion"><con:configuration><scriptText>import javax.xml.XMLConstants
+import javax.xml.transform.stream.StreamSource
+import javax.xml.validation.SchemaFactory
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def xmlResponse = messageExchange.response.responseContent
+
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+def passed = true
+
+def addressInProperty = context.testCase.getPropertyValue("address")
+
+if(httpStatusCode == "200"){
+	log.info("HTTP  Status : " + httpStatusCode +" This is OK" )
+	def responseParser = new XmlParser().parseText(xmlResponse)
+	log.info responseParser
+	
+	String address = responseParser.result.address_component.long_name[0].text()
+	log.info address
+	
+	if(address == addressInProperty){
+		
+		log.info ("Result of conversion is:" +address)
+
+	String latCoordinatesInResponse = responseParser.result.geometry.location.lat[0].text()
+	log.info ("Status info lat:" + latCoordinatesInResponse)
+
+	String lngCoordinatesInResponse = responseParser.result.geometry.location.lng[0].text()
+	log.info ("Status info lng:" + lngCoordinatesInResponse)
+
+	String coordinatesInResponse = latCoordinatesInResponse + "," + lngCoordinatesInResponse
+
+		context.testCase.setPropertyValue("latlng", coordinatesInResponse)
+		
+	}else{
+		log.error("BVT ERROR:Response does not have correct  address")
+		passed = false					
+		}
+	
+}else{
+       log.error(" BVT_ERROR: Wrong HTTP status code: "+httpStatusCode)	
+       passed = false
+}  
+
+if(passed){
+	log.info("Test PASS!")
+	
+}else{
+	assert false 
+}
+
+
+log.info("")
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="address" value="${#TestCase#address}"/>
+  <con:entry key="key" value="AIzaSyBTHH-DE33t50C80qiF55fpUuNGgEQDJlI"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET-Reverse_geocode" id="ce56362f-d1a4-49fd-92c7-b659ff7182c8"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET-Reverse_geocode" id="ad8d602d-9f77-497b-bd0b-f1b74c3e7434" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/xml</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="97d2951d-6190-4f69-aca9-d2d8fdfcc31b" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="36972ce9-f065-4cd0-b7f3-2d3a473ce433" name="Contains"><con:configuration><token>Šumadijski okrug</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="7fb7454d-0fb6-4b41-bc8f-6e3cda1b57c7" name="Script Assertion"><con:configuration><scriptText>import javax.xml.XMLConstants
+import javax.xml.transform.stream.StreamSource
+import javax.xml.validation.SchemaFactory
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def xmlResponse = messageExchange.response.responseContent
+
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+def passed = true
+
+def addressInProperty = context.testCase.getPropertyValue("address")
+def coordinatesInProperty = context.testCase.getPropertyValue("latlng")
+
+
+if(httpStatusCode == "200"){
+	log.info("HTTP  Status : " + httpStatusCode +" This is OK" )
+	def responseParser = new XmlParser().parseText(xmlResponse)
+	log.info responseParser
+	
+	String address = responseParser.result.address_component.long_name[2].text()
+	log.info address
+	
+	if(address == addressInProperty){
+		
+		log.info ("Result of conversion is:" +address)
+
+	String latCoordinatesInResponse = responseParser.result.geometry.location.lat[0].text()
+	log.info ("Status info lat:" + latCoordinatesInResponse)
+
+	String lngCoordinatesInResponse = responseParser.result.geometry.location.lng[0].text()
+	log.info ("Status info lng:" + lngCoordinatesInResponse)
+
+	String coordinatesInResponse = latCoordinatesInResponse + "," + lngCoordinatesInResponse
+
+		
+		
+	}else{
+		log.error("BVT ERROR:Response does not have correct  address")
+		passed = false					
+		}
+	
+}else{
+       log.error(" BVT_ERROR: Wrong HTTP status code: "+httpStatusCode)	
+       passed = false
+}  
+
+if(passed){
+	log.info("Test PASS!")
+	
+}else{
+	assert false 
+}
+
+
+log.info("")
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="latlng" value="${#TestCase#latlng}"/>
+  <con:entry key="key" value="AIzaSyC-zLT1LhCqWvYJkGSLPkLZ43Oy61oY2vk"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>address</con:name><con:value>Kragujevac</con:value></con:property><con:property><con:name>latlng</con:name><con:value>44.0127932,20.9114225</con:value></con:property></con:properties></con:testCase><con:testCase id="565f2a27-8390-419e-82c1-cdecf77efa2a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reverse Geocoding Test Cases" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="GET - Reverse_geocode_sample_request" id="a0d72103-41f0-4211-8b16-247848973ee9"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Reverse_geocode_sample_request" id="353248e6-165f-41b7-8178-9282421b00fc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ac9e708a-39d5-4c5f-8038-9093778911b4" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="db80411e-6b0b-45c8-8cd6-e754a13bf5ef" name="Contains"><con:configuration><token>Mostar</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="latlng" value="${#TestCase#location}"/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Reverse_Geocoding_Place_ID" id="fd87c218-68eb-4fc0-a5b2-fab4572cfbc0"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Reverse_Geocoding_Place_ID" id="485f558a-0b9c-498e-8d6a-2d080f53b928" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="1ddf693b-7c3d-46c5-b190-745c46696f7e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="b54d82ea-b1f0-4500-b7dd-0bb312189365" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+
+def placeIdFromProperty = context.testCase.getPropertyValue("place_id")
+
+	if (context.testCase.getTestStepAt(context.getCurrentStepIndex()).getAssertionByName("Valid HTTP Status Codes").getStatus().toString() == "VALID") {
+		try {
+			response = messageExchange.response.responseContent;
+			slurper = new JsonSlurper();
+			json = slurper.parseText response;
+			log.info(json.results.place_id)
+
+			json.results.place_id.each {
+				log.info it
+
+				def checkForPlaceID = it
+
+					if (checkForPlaceID == placeIdFromProperty) {
+						log.info("Place ID found!")
+						log.info true;
+						assert true;
+
+					} else {
+						log.error("BVT ERROR:Response does not have valid place ID")
+						passed = false
+
+					}
+
+			}
+		} catch (e) {
+			log.error("There was no JSON in server response. Exiting with error: " + e);
+			assert false;
+		}
+	} else {
+		try {
+			response = messageExchange.response.responseContent;
+			slurper = new JsonSlurper();
+			json = slurper.parseText response;
+		} catch (e) {
+			log.error("There was no JSON in server response. Exiting with error: " + e);
+			assert false;
+		}
+		log.error("Error")
+
+		assert false;
+	}
+
+	log.info("")</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="1c1a47b1-1865-4c43-b1f0-75b5bfe86d38" name="Contains"><con:configuration><token>Sarajevo</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d2049e96-4fce-415f-a40e-d4748a4cf550" name="Assert Place_ID"><con:configuration><token>ChIJ0Ztx7bHLWEcRPrOH3qbNLlY</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="place_id" value="${#TestCase#place_id}"/>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Reverse_Geocoding_Restricted_By_Type" id="521ccca8-95b2-45c7-a821-630d6fc8af9a"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Reverse_Geocoding_Restricted_By_Type" id="8357df94-216b-4cd0-b8e4-9141966795a6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="72e27856-43c1-4f5c-83a8-a99b1e300940" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a82791d6-a4b2-4ed0-bf0b-b4ec2423bd1a" name="Contains"><con:configuration><token>GEOMETRIC_CENTER</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="location_type" value="ROOFTOP"/>
+  <con:entry key="latlng" value="${#TestCase#location}"/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value="location_type=GEOMETRIC_CENTER"/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry><con:entry>place_id</con:entry><con:entry>key</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Reverse_Geocoding_ INVALID_REQUEST(Negative test)" id="ddc7baf4-93a2-471c-b20d-1e092f964ea4"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Reverse_Geocoding_ INVALID_REQUEST(Negative test)" id="9c300be4-0a76-4056-b41a-8918d4668f42" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/json</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="98435684-5de2-49d5-9144-a77a67d1d052" name="Valid HTTP Status Codes"><con:configuration><codes>400</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="6f205e50-54bc-4258-9399-05d1401717c0" name="Contains"><con:configuration><token>INVALID_REQUEST</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="latlng" value=""/>
+  <con:entry key="language" value=""/>
+  <con:entry key="components" value=""/>
+  <con:entry key="format" value=""/>
+</con:parameters><con:parameterOrder><con:entry>sensor</con:entry><con:entry>key</con:entry><con:entry>address</con:entry><con:entry>bounds</con:entry><con:entry>region</con:entry><con:entry>format</con:entry><con:entry>latlng</con:entry><con:entry>components</con:entry><con:entry>language</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET-Reverse_geocode(Positive test)" id="b6a206ab-6368-4750-a7ec-831e2e9dff80"><con:settings/><con:config service="https://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET-Reverse_geocode(Positive test)" id="ad8d602d-9f77-497b-bd0b-f1b74c3e7434" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maps.googleapis.com</con:endpoint><con:request/><con:originalUri>https://maps.googleapis.com/maps/api/geocode/xml</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="8934f844-22ae-4fcc-a2f4-6b4c29c6f18a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b4a8077a-35f1-40eb-9369-b262de527738" name="Contains"><con:configuration><token>Sarajevo</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="3d4b2131-2b13-4630-a59b-f7363d51119e" name="Script Assertion"><con:configuration><scriptText>import javax.xml.XMLConstants
+import javax.xml.transform.stream.StreamSource
+import javax.xml.validation.SchemaFactory
+
+def httpResponseHeaders = context.testCase.testSteps[context.testCase.getTestStepAt(context.getCurrentStepIndex()).getLabel()].testRequest.response.responseHeaders
+def xmlResponse = messageExchange.response.responseContent
+
+def httpStatus = httpResponseHeaders["#status#"]
+def httpStatusCode = (httpStatus =~ "[1-5]\\d\\d")[0]
+log.info("Status: "+httpStatusCode)
+def passed = true
+
+
+
+if(httpStatusCode == "200"){
+	log.info("HTTP  Status : " + httpStatusCode +" This is OK" )
+	def responseParser = new XmlParser().parseText(xmlResponse)
+	log.info responseParser
+	
+	String latCoordinatesInResponse = responseParser.result.geometry.location.lat[0].text()
+	log.info ("Status info lat:" + latCoordinatesInResponse)
+
+	String lngCoordinatesInResponse = responseParser.result.geometry.location.lng[0].text()
+	log.info ("Status info lng:" + lngCoordinatesInResponse)
+
+	String coordinatesInResponse = latCoordinatesInResponse + "," + lngCoordinatesInResponse
+	log.info ("Status info coordinates:" + coordinatesInResponse)
+
+	String location = responseParser.result.address_component.long_name[0].text()
+	
+	if(location == ("Sarajevo")){
+		
+		log.info ("Result of conversion is:" +location)
+		
+	}else{
+		log.error("BVT ERROR:Response does not have correct  address")
+		passed = false					
+		}
+	
+}else{
+       log.error(" BVT_ERROR: Wrong HTTP status code: "+httpStatusCode)	
+       passed = false
+}  
+
+if(passed){
+	log.info("Test PASS!")
+	
+}else{
+	assert false 
+}
+
+
+log.info("")
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="sensor" value="false"/>
+  <con:entry key="place_id" value="${#TestCase#place_id}"/>
+  <con:entry key="key" value="AIzaSyC-zLT1LhCqWvYJkGSLPkLZ43Oy61oY2vk"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>location</con:name><con:value>43.34377480000001,17.8077578</con:value></con:property><con:property><con:name>place_ID</con:name><con:value>ChIJ0Ztx7bHLWEcRPrOH3qbNLlY</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:restMockService id="83a15ea8-5ba1-4f76-b076-b2d8d361324b" port="8080" path="/" host="PARADIGMA"><con:settings/><con:properties/></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
